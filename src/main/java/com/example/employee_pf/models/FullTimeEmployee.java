@@ -8,8 +8,14 @@ import javax.persistence.Entity;
 
 @Entity
 @Getter
-@AllArgsConstructor
 @NoArgsConstructor
 public class FullTimeEmployee extends Employee{
-    private long hourlyWage;
+    private long salary;
+
+    public FullTimeEmployee(long id, String name, long salary) {
+        super(id, name);
+        this.salary = salary;
+    }
+
+
 }
